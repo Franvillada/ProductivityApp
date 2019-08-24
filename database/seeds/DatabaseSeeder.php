@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Project;
+use App\Task;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(Project::class, 10)->create();
+        factory(Task::class,50)->create();
     }
 }

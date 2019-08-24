@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/activeprojects','ProjectController@indexActive');
+Route::get('/standbyprojects','ProjectController@indexStandBy');
+Route::get('/finishedprojects','ProjectController@indexFinished');
+Route::get('/ideas','IdeaController@index');

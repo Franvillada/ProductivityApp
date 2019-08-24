@@ -1,0 +1,74 @@
+/*
+Welcome page styles for desktop
+*/
+
+.welcome-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    width: 17%;
+    height: 12%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.learn-button{
+    background-color: #F29849;
+    color: #150940;
+}
+
+.learn-button:hover{
+    color: #150940;
+}
+
+.work-button{
+    background-color: #150940;
+    color: #F29849;
+}
+
+.work-button:hover{
+    color: #F29849;
+}
+
+/* END */
+
+/*
+Navbar Component Styles for desktop
+*/
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.navbar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.content-container{
+    width: 75vw;
+}
+
+/* END */

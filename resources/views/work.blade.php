@@ -12,13 +12,8 @@
 
     </head>
     <body>
-        <div class="welcome-container">
-            <a href="/aprendizaje" class="learn-button">
-                Aprendizaje
-            </a>
-            <a href="/trabajo" class="work-button">
-                Trabajo
-            </a>
+        <div id="content">
+
         </div>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
