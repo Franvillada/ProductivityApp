@@ -66790,6 +66790,32 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Idea.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/Idea.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Idea = function Idea(_ref) {
+  var data = _ref.data;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, data.map(function (ideas) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: ideas.id
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, ideas.description));
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Idea);
+
+/***/ }),
+
 /***/ "./resources/js/components/Navbar.js":
 /*!*******************************************!*\
   !*** ./resources/js/components/Navbar.js ***!
@@ -66803,11 +66829,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var Navbar = function Navbar() {
+var Navbar = function Navbar(_ref) {
+  var active = _ref.active,
+      changeData = _ref.changeData;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     id: "navbar",
     className: "navbar-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos en Curso")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos en Stand-By")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Ideas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos Finalizados")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: active == 'active' ? 'active nav-item' : 'nav-item',
+    onClick: function onClick() {
+      return changeData('active');
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos en Curso")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: active == 'stand-by' ? 'active nav-item' : 'nav-item',
+    onClick: function onClick() {
+      return changeData('stand-by');
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos en Stand-By")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: active == 'ideas' ? 'active nav-item' : 'nav-item',
+    onClick: function onClick() {
+      return changeData('ideas');
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Ideas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: active == 'finished' ? 'active nav-item' : 'nav-item',
+    onClick: function onClick() {
+      return changeData('finished');
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Proyectos Finalizados")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -66867,18 +66915,111 @@ var Pagination = function Pagination(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-var Project = function Project(_ref) {
-  var data = _ref.data;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "content-container"
-  }, data.map(function (project) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: project.id
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, project.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, project.description));
-  }));
-};
+
+var Project =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Project, _Component);
+
+  function Project(props) {
+    var _this;
+
+    _classCallCheck(this, Project);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Project).call(this, props));
+    _this.getNormalFinishedTasks = _this.getNormalFinishedTasks.bind(_assertThisInitialized(_this));
+    _this.getNormalTasks = _this.getNormalTasks.bind(_assertThisInitialized(_this));
+    _this.getCriticalFinishedTasks = _this.getCriticalFinishedTasks.bind(_assertThisInitialized(_this));
+    _this.getCriticalTasks = _this.getCriticalTasks.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Project, [{
+    key: "getNormalFinishedTasks",
+    value: function getNormalFinishedTasks() {
+      var count = 0;
+
+      for (var i = 0; i < this.props.tasks.length; i++) {
+        if (this.props.tasks[i].is_completed == 1 && this.props.tasks[i].is_critical == 0) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+  }, {
+    key: "getNormalTasks",
+    value: function getNormalTasks() {
+      var count = 0;
+
+      for (var i = 0; i < this.props.tasks.length; i++) {
+        if (this.props.tasks[i].is_critical == 0) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+  }, {
+    key: "getCriticalFinishedTasks",
+    value: function getCriticalFinishedTasks() {
+      var count = 0;
+
+      for (var i = 0; i < this.props.tasks.length; i++) {
+        if (this.props.tasks[i].is_completed == 1 && this.props.tasks[i].is_critical == 1) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+  }, {
+    key: "getCriticalTasks",
+    value: function getCriticalTasks() {
+      var count = 0;
+
+      for (var i = 0; i < this.props.tasks.length; i++) {
+        if (this.props.tasks[i].is_critical == 1) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "task-amount-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.getNormalFinishedTasks() + '/' + this.getNormalTasks()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "critical-tasks"
+      }, this.getCriticalFinishedTasks() + '/' + this.getCriticalTasks())));
+    }
+  }]);
+
+  return Project;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Project);
 
@@ -66903,6 +67044,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar */ "./resources/js/components/Navbar.js");
 /* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Project */ "./resources/js/components/Project.js");
 /* harmony import */ var _Pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Pagination */ "./resources/js/components/Pagination.js");
+/* harmony import */ var _Idea__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Idea */ "./resources/js/components/Idea.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -66933,6 +67075,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var ProjectList =
 /*#__PURE__*/
 function (_Component) {
@@ -66945,14 +67088,16 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ProjectList).call(this, props));
     _this.state = {
-      active: "en-curso",
-      data: [],
+      active: "active",
+      projectsData: [],
+      ideasData: [],
       currentPage: 1,
-      projectsPerPage: 3,
+      projectsPerPage: 4,
       error: null
     };
     _this.getCurrentProjects = _this.getCurrentProjects.bind(_assertThisInitialized(_this));
     _this.paginate = _this.paginate.bind(_assertThisInitialized(_this));
+    _this.changeData = _this.changeData.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -66979,7 +67124,7 @@ function (_Component) {
               case 6:
                 data = _context.sent;
                 this.setState({
-                  data: data
+                  projectsData: data
                 });
                 _context.next = 13;
                 break;
@@ -67010,29 +67155,273 @@ function (_Component) {
     value: function getCurrentProjects() {
       var indexOfLastProject = this.state.currentPage * this.state.projectsPerPage;
       var indexOfFirstProject = indexOfLastProject - this.state.projectsPerPage;
-      var currentProjects = this.state.data.slice(indexOfFirstProject, indexOfLastProject);
+      var currentProjects = this.state.projectsData.slice(indexOfFirstProject, indexOfLastProject);
       return currentProjects;
     }
   }, {
     key: "paginate",
     value: function paginate(pageNumber) {
-      console.log(pageNumber);
       this.setState({
         currentPage: pageNumber
       });
+    }
+  }, {
+    key: "changeData",
+    value: function changeData(active) {
+      var _this2 = this;
+
+      if (active == 'stand-by') {
+        var fetchData =
+        /*#__PURE__*/
+        function () {
+          var _ref = _asyncToGenerator(
+          /*#__PURE__*/
+          _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+            var res, data;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.prev = 0;
+                    _context2.next = 3;
+                    return fetch('/api/standbyprojects');
+
+                  case 3:
+                    res = _context2.sent;
+                    _context2.next = 6;
+                    return res.json();
+
+                  case 6:
+                    data = _context2.sent;
+
+                    _this2.setState({
+                      projectsData: data,
+                      ideasData: [],
+                      active: 'stand-by',
+                      currentPage: 1
+                    });
+
+                    _context2.next = 13;
+                    break;
+
+                  case 10:
+                    _context2.prev = 10;
+                    _context2.t0 = _context2["catch"](0);
+
+                    _this2.setState({
+                      error: _context2.t0
+                    });
+
+                  case 13:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, null, [[0, 10]]);
+          }));
+
+          return function fetchData() {
+            return _ref.apply(this, arguments);
+          };
+        }();
+
+        fetchData();
+      } else if (active == 'finished') {
+        var _fetchData =
+        /*#__PURE__*/
+        function () {
+          var _ref2 = _asyncToGenerator(
+          /*#__PURE__*/
+          _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+            var res, data;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    _context3.prev = 0;
+                    _context3.next = 3;
+                    return fetch('/api/finishedprojects');
+
+                  case 3:
+                    res = _context3.sent;
+                    _context3.next = 6;
+                    return res.json();
+
+                  case 6:
+                    data = _context3.sent;
+
+                    _this2.setState({
+                      projectsData: data,
+                      ideasData: [],
+                      active: 'finished',
+                      currentPage: 1
+                    });
+
+                    _context3.next = 13;
+                    break;
+
+                  case 10:
+                    _context3.prev = 10;
+                    _context3.t0 = _context3["catch"](0);
+
+                    _this2.setState({
+                      error: _context3.t0
+                    });
+
+                  case 13:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, null, [[0, 10]]);
+          }));
+
+          return function _fetchData() {
+            return _ref2.apply(this, arguments);
+          };
+        }();
+
+        _fetchData();
+      } else if (active == 'active') {
+        var _fetchData2 =
+        /*#__PURE__*/
+        function () {
+          var _ref3 = _asyncToGenerator(
+          /*#__PURE__*/
+          _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+            var res, data;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.prev = 0;
+                    _context4.next = 3;
+                    return fetch('/api/activeprojects');
+
+                  case 3:
+                    res = _context4.sent;
+                    _context4.next = 6;
+                    return res.json();
+
+                  case 6:
+                    data = _context4.sent;
+
+                    _this2.setState({
+                      projectsData: data,
+                      ideasData: [],
+                      active: 'active',
+                      currentPage: 1
+                    });
+
+                    _context4.next = 13;
+                    break;
+
+                  case 10:
+                    _context4.prev = 10;
+                    _context4.t0 = _context4["catch"](0);
+
+                    _this2.setState({
+                      error: _context4.t0
+                    });
+
+                  case 13:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, null, [[0, 10]]);
+          }));
+
+          return function _fetchData2() {
+            return _ref3.apply(this, arguments);
+          };
+        }();
+
+        _fetchData2();
+      } else if (active == 'ideas') {
+        var _fetchData3 =
+        /*#__PURE__*/
+        function () {
+          var _ref4 = _asyncToGenerator(
+          /*#__PURE__*/
+          _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
+            var res, data;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    _context5.prev = 0;
+                    _context5.next = 3;
+                    return fetch('/api/ideas');
+
+                  case 3:
+                    res = _context5.sent;
+                    _context5.next = 6;
+                    return res.json();
+
+                  case 6:
+                    data = _context5.sent;
+
+                    _this2.setState({
+                      ideasData: data,
+                      projectsData: [],
+                      active: 'ideas',
+                      currentPage: 1
+                    });
+
+                    _context5.next = 13;
+                    break;
+
+                  case 10:
+                    _context5.prev = 10;
+                    _context5.t0 = _context5["catch"](0);
+
+                    _this2.setState({
+                      error: _context5.t0
+                    });
+
+                  case 13:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5, null, [[0, 10]]);
+          }));
+
+          return function _fetchData3() {
+            return _ref4.apply(this, arguments);
+          };
+        }();
+
+        _fetchData3();
+      }
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "main-container"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        data: this.getCurrentProjects()
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        active: this.state.active,
+        changeData: this.changeData
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "content-container"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, this.state.active == 'active' ? 'Proyectos en Curso' : this.state.active == 'stand-by' ? 'Proyectos en Stand-By' : this.state.active == 'finished' ? 'Proyectos Finalizados' : 'Ideas'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "projects-list-container"
+      }, this.getCurrentProjects().map(function (project) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          key: project.id,
+          title: project.title,
+          description: project.description,
+          tasks: project.tasks
+        });
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Idea__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        data: this.state.ideasData
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Pagination__WEBPACK_IMPORTED_MODULE_5__["default"], {
         projectsPerPage: this.state.projectsPerPage,
-        totalProjects: this.state.data.length,
+        totalProjects: this.state.projectsData.length,
         paginate: this.paginate
-      }));
+      })));
     }
   }]);
 

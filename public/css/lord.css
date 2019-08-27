@@ -1,3 +1,8 @@
+*{
+    font-family: baskerville-display-pt, serif;
+    font-style: normal;
+    font-weight: 400;
+}
 /*
 Welcome page styles for desktop
 */
@@ -11,7 +16,7 @@ Welcome page styles for desktop
     align-items: center;
 }
 
-a{
+.learn-button{
     text-decoration: none;
     display: flex;
     width: 17%;
@@ -19,6 +24,8 @@ a{
     justify-content: center;
     align-items: center;
     font-size: 2em;
+    background-color: #F29849;
+    color: #150940;
 }
 
 a:hover{
@@ -26,16 +33,18 @@ a:hover{
     opacity: 0.7;
 }
 
-.learn-button{
-    background-color: #F29849;
-    color: #150940;
-}
-
 .learn-button:hover{
     color: #150940;
 }
 
 .work-button{
+    text-decoration: none;
+    display: flex;
+    width: 17%;
+    height: 12%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
     background-color: #150940;
     color: #F29849;
 }
@@ -67,8 +76,88 @@ Navbar Component Styles for desktop
     justify-content: center;
 }
 
+.nav-item{
+    display: flex;
+    border: 1px solid #150940;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    margin: 2%;
+    border-radius: 6px;
+}
+
+.nav-item h3{
+    text-align: center;
+    margin: 0% 10%;
+}
+
+.active{
+    background-color: #150940;
+}
+
+.active h3{
+    color: #F2E74B;
+}
+
+/* END */
+
+/* ProjectList Component Styles for Dekstop */
+
 .content-container{
     width: 75vw;
+    text-align: center;
+}
+
+.content-container h3{
+    color: #150940;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.projects-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 35vh;
+    background-color: #F29849;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.project-card h2{
+    height: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 1rem;
+}
+
+.project-card p{
+    height: 50%;
+    margin: 0 1rem;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.task-amount-container{
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.task-amount-container p{
+    font-size: 2rem;
+}
+
+.critical-tasks{
+    color: red;
 }
 
 /* END */

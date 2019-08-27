@@ -12,7 +12,7 @@ class ProjectController extends Controller
         ->where('is_completed', '=' ,0)
         ->get();
 
-        return response()->json($projects,200);
+        return response()->json($projects->load('tasks'),200);
     }
 
     public function indexStandBy(){
@@ -20,12 +20,12 @@ class ProjectController extends Controller
         ->where('is_completed', '=' ,0)
         ->get();
 
-        return response()->json($projects,200);
+        return response()->json($projects->load('tasks'),200);
     }
 
     public function indexFinished(){
         $projects = Project::where('is_completed','=',1)->get();
 
-        return response()->json($projects,200);
+        return response()->json($projects->load('tasks'),200);
     }
 }

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/lord.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://use.typekit.net/umx2par.css">
     </head>
     <body>
         <div class="welcome-container">

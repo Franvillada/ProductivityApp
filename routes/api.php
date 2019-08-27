@@ -17,3 +17,5 @@ Route::get('/activeprojects','ProjectController@indexActive');
 Route::get('/standbyprojects','ProjectController@indexStandBy');
 Route::get('/finishedprojects','ProjectController@indexFinished');
 Route::get('/ideas','IdeaController@index');
+
+Route::get('/tasks/{project_id}','TaskController@index');
