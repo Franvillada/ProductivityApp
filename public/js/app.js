@@ -66805,10 +66805,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var Idea = function Idea(_ref) {
   var data = _ref.data;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, data.map(function (ideas) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "idea-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: data.length == 0 ? "none nueva-idea" : "nueva-idea"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "nuevo-proyecto"
+  }, "AGREGAR")), data.map(function (ideas) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: ideas.id
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, ideas.description));
+      key: ideas.id,
+      className: "idea"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, ideas.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A PROYECTO"));
   }));
 };
 
@@ -66885,7 +66895,9 @@ var Pagination = function Pagination(_ref) {
     pageNumbers.push(i);
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "pagination-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "pagination"
   }, pageNumbers.map(function (number) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -67421,7 +67433,9 @@ function (_Component) {
         projectsPerPage: this.state.projectsPerPage,
         totalProjects: this.state.projectsData.length,
         paginate: this.paginate
-      })));
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        className: this.state.ideasData.length == 0 ? "nuevo-proyecto" : "none nuevo-proyecto"
+      }, "NUEVO PROYECTO")));
     }
   }]);
 
@@ -67454,8 +67468,8 @@ if (document.getElementById('content')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\CX\Desktop\Desarrollo-Web\ProductivityApp\App\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\CX\Desktop\Desarrollo-Web\ProductivityApp\App\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! c:\Users\CX\Desktop\Desarrollo-Web\ProductivityApp\App\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! c:\Users\CX\Desktop\Desarrollo-Web\ProductivityApp\App\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

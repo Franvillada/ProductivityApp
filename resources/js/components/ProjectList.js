@@ -156,6 +156,10 @@ export default class ProjectList extends Component {
                         totalProjects = {this.state.projectsData.length}
                         paginate = {this.paginate}
                     />
+
+                    <button className={ (this.state.ideasData.length == 0) ? "nuevo-proyecto" : "none nuevo-proyecto"} >
+                        NUEVO PROYECTO
+                    </button>
                 </div>
             </div>
         );

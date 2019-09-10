@@ -3,6 +3,23 @@
     font-style: normal;
     font-weight: 400;
 }
+
+body{
+    background-color: white;
+}
+
+button{
+    background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+
 /*
 Welcome page styles for desktop
 */
@@ -63,7 +80,6 @@ Navbar Component Styles for desktop
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     width: 100vw;
 }
 
@@ -141,6 +157,7 @@ Navbar Component Styles for desktop
 
 .project-card p{
     height: 50%;
+    overflow: hidden;
     margin: 0 1rem;
     font-weight: 800;
     font-size: 1rem;
@@ -159,5 +176,78 @@ Navbar Component Styles for desktop
 .critical-tasks{
     color: red;
 }
+
+.nuevo-proyecto{
+    background-color: #150940;
+    color: #F2E74B;
+    padding: 1rem 2rem;
+    margin: 5% 0;
+    font-weight: bold;
+}
+
+/* END */
+
+/* Pagination Component Styles for Desktop */
+
+.pagination-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* END */
+
+/* Idea Component Styles for Desktop */
+
+.idea-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.nueva-idea{
+    width: 80%;
+}
+
+.nueva-idea input{
+    width: 100%;
+    border: 3px solid #150940;
+    color: #150940;
+    padding: 0.5rem;
+    font-size: 1.1em;
+}
+
+.nueva-idea button{
+    width: 30%;
+}
+
+.idea{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border: 3px solid #F29849;
+    margin: 1rem 0;
+}
+
+.idea p{
+    display: block;
+    width: 80%;
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.idea p:last-child{
+    width: 20%;
+    background-color: #F29849;
+    color: #150940;
+    text-align: center;
+}
+
+
+
 
 /* END */
